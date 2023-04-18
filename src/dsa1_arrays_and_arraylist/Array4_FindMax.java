@@ -8,7 +8,7 @@ public class Array4_FindMax {
     }
 
     public static int findMax(int[] arr){
-        if(arr.length <=0 )
+        if(arr.length <=0)
             return -1;
         if(arr ==  null)
             return -1;
