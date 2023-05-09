@@ -9,6 +9,7 @@ public class Array1_ArryaOfPrimitives {
         int[] arr = new int[3];
 
         // inserting using for loop
+        System.out.println("Enter 3 intergers into an array");
         for (int i = 0; i < arr.length; i++) {
             arr[i] = sc.nextInt();
         }
