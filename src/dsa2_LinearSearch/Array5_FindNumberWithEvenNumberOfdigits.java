@@ -2,7 +2,7 @@ package dsa2_LinearSearch;
 
 public class Array5_FindNumberWithEvenNumberOfdigits {
     public static void main(String[] args) {
-        int[] arr = new int[]{ 1,234,36,3453,23,2,564,44565};
+        int[] arr = new int[]{ 1,234,36,3453,23,-2,564,44565};
         System.out.println("Count of Number with odd number of digits : "+ findNumbers(arr) );
 
     }
@@ -16,6 +16,8 @@ public class Array5_FindNumberWithEvenNumberOfdigits {
     }
 
     static int findDigits(int number){
+        if(number <0)
+            number*=-1;
         int count = 0;
         while(number > 0){
             number = number /10;
