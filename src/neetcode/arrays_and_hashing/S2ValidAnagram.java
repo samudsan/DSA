@@ -10,7 +10,13 @@ public class S2ValidAnagram {
         boolean results = isValidAnagram(s1,s2);
         System.out.println(results);
     }
+/*
+This problem can solved in two ways,
+    one is creating an array of size 26 and incrmenting respective character index when an alphabet appears,
+    and decreasing the respective index while reading second string. if array contains all zeros it is valid, otherwise not
 
+    Second approach is, maintaining charSequence count of s1 and s2 in a hashmap and comparing both hashmaps, if both are same they are valid anagram otherwise not.
+* */
     private static boolean isValidAnagram(String s1, String s2) {
         HashMap<Character, Integer> hm = new HashMap<>();
         for (char ch: s1.toCharArray()) {

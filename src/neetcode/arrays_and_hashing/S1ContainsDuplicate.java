@@ -8,7 +8,10 @@ public class S1ContainsDuplicate {
         boolean results = containsDuplicate(array);
         System.out.println(results);
     }
-
+/*
+* the approach is using HashSet,
+* by default HashSet add method returns false if the element that we tried adding already exist.
+* */
     private static boolean containsDuplicate(int array[]) {
         HashSet<Integer> hs =  new HashSet<>();
         for (int element :array) {
