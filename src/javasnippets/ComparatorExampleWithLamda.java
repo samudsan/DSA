@@ -13,5 +13,8 @@ public class ComparatorExampleWithLamda {
         list.add(3);
         Collections.sort(list, (i1, i2) -> i1.compareTo(i2));
         System.out.println(list);
+
+        System.out.println("using streams");
+        list.stream().sorted().forEach(i-> System.out.println(i));
     }
 }

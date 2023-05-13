@@ -24,6 +24,13 @@ public class SortHashMapValues {
         }
 
         // Print the sorted map
-        System.out.println(sortedMap); // Output: {orange=1, banana=2, apple=3, pear=4}
+        System.out.println(sortedMap); // Output: {orange=1, banana=2, apple=3, pear=4}*/
+
+        // Sorting using lamda function.
+        Collections.sort(entryList, ((o1, o2) -> o1.getValue()- o2.getValue()));
+        System.out.println(entryList);
+
+        System.out.println("sorted keys using lamda");
+        entryList.stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
     }
 }
