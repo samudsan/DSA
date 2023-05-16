@@ -6,7 +6,7 @@ public class S1_ValidPalindrom {
 
         System.out.println(isValidPalindrom(s));
     }
-
+// Method1
     private static boolean isValidPalindrom(String s) {
         String alpha = "abcdefghijklmnopqrstuvwxyz0123456789";
         String s1 = "";
