@@ -3,7 +3,7 @@ package javasnippets;
 import java.util.*;
 
 /*we can also sort keys in sorted order with below program by just changing Map.Entry.comparingByValue() to Map.Entry.comparingByKey()*/
-public class SortHashMapValues {
+public class S0_SortHashMapValues {
     public static void main(String[] args) {
         Map<String, Integer> unsortedMap = new HashMap<>();
         unsortedMap.put("apple", 3);

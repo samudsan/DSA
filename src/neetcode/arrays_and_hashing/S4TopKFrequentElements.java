@@ -15,7 +15,7 @@ public class S4TopKFrequentElements {
         for (int num : nums) {
             frequncyMap.put(num, frequncyMap.getOrDefault(num, 0) +1);
         }
-
+        System.out.println(frequncyMap);
         // Creating Priority Queue
         PriorityQueue<Map.Entry<Integer, Integer>> pq =new PriorityQueue<>((a,b) -> a.getValue() - b.getValue());
 
@@ -23,7 +23,9 @@ public class S4TopKFrequentElements {
             pq.add(entry);
             if(pq.size() > k)
                 pq.poll();
+            System.out.println(pq);
         }
+
 
         int i=k;
         while(!pq.isEmpty())

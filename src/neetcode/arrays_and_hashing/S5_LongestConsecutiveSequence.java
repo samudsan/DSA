@@ -13,6 +13,7 @@ public class S5_LongestConsecutiveSequence {
         for (int i: nums) {
             map.put(i, map.getOrDefault(i,0)+1);
         }
+        System.out.println(map);
 
         ArrayList<Integer> list = new ArrayList<>();
         for (Map.Entry<Integer, Integer> entry:map.entrySet()) {

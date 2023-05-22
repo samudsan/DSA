@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class S2ValidAnagram {
     public static void main(String[] args) {
-        String s1 = "ab";
-        String s2 = "a";
+        String s1 = "madam";
+        String s2 = "admam";
         boolean results = isValidAnagram(s1,s2);
         System.out.println(results);
     }
