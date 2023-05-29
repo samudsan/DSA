@@ -2,7 +2,7 @@ package javasnippets;
 
 import java.util.*;
 
-public class ComparatorExampleTest {
+public class S1_ComparatorExampleTest {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         list.add(2);
