@@ -15,10 +15,7 @@ public class S4_PriorityQueuePollMethodTest {
         pq.add(15);
 
         System.out.println("Elements in the priority queue are: " + pq);
-
         System.out.println("Head Element removed from the priority queue is: " + pq.poll());
-
         System.out.println("Elements after removing head element in the priority queue are: " + pq);
-
     }
 }
