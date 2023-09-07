@@ -38,13 +38,13 @@ public class LL2_InsertNode {
         }
         newNode.next = currentNode.next;
         currentNode.next  = newNode;
-        System.out.println();
+        System.out.print("\nInserting at a position");
         return head;
     }
 
     public static Node insertAtBegin(Node head, Node newNode){
         newNode.next = head;
-        System.out.println();
+        System.out.print("\nInserting at the begining");
         return newNode;
     }
 }
