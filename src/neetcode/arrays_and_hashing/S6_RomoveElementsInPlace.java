@@ -5,6 +5,11 @@ public class S6_RomoveElementsInPlace {
         int[] nums = new int[]{0,1,2,2,3,0,4,2};
         int val = 2;
         System.out.println("\n count is "+removeElement(nums, val));
+
+        for (int num: nums
+             ) {
+            System.out.println(num);
+        }
     }
 
     private static int removeElement(int[] nums, int val) {
