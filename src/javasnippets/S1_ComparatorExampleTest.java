@@ -17,6 +17,6 @@ class ComparatorExample implements Comparator<Integer>{
 
     @Override
     public int compare(Integer i1 , Integer i2) {
-        return i1.compareTo(i2);
+        return i2.compareTo(i1); // To sort in reverse order just flipped i2 and i1 postions
     }
 }
