@@ -10,10 +10,10 @@ public class S2_ComparatorExampleWithLamda {
         list.add(2);
         list.add(1);
         list.add(3);
-        Collections.sort(list, (i1, i2) -> i1.compareTo(i2));
+        Collections.sort(list, (i1, i2) -> i1.compareTo(i2)); // Sort function takes comparator as its second parameter
         System.out.println(list);
 
-        System.out.println("using streams");
+        System.out.println("Printing using streams");
         list.stream().sorted().forEach(i-> System.out.println(i));
     }
 }
