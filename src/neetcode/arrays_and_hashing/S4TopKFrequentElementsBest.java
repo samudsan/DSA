@@ -28,6 +28,8 @@ public class S4TopKFrequentElementsBest {
             bucket[frequency].add(key);
         }
 
+        // From buckets array we will read from right side.
+        // if number of element in result matches k, then we stop further processing buckets array and return results array
         int index = 0;
         int results[] = new int[k];
         for (int i=nums.length; i>=0 ; i--)
