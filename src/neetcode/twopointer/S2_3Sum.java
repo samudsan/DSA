@@ -32,6 +32,7 @@ public class S2_3Sum {
                 }
             }
         }
+
         return list;
     }
 }
