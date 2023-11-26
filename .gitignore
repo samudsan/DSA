@@ -1,0 +1,12 @@
+/.idea/.gitignore
+/out/production/DSA/dsa1_arrays_and_arraylist/Array1_ArryaOfPrimitives.class
+/out/production/DSA/dsa1_arrays_and_arraylist/Array2_ArryaOfObjects.class
+/out/production/DSA/dsa1_arrays_and_arraylist/Array3_MultiDimentionalArray.class
+/out/production/DSA/dsa1_arrays_and_arraylist/Array4_FindMax.class
+/out/production/DSA/dsa1_arrays_and_arraylist/Array5_ReverseAnAray.class
+/out/production/DSA/dsa1_arrays_and_arraylist/ArrayList1_Syntax.class
+/out/production/DSA/dsa1_arrays_and_arraylist/ArrayList2_2dArrayList.class
+/DSA.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/uiDesigner.xml

@@ -1,7 +1,7 @@
 package neetcode.twopointer;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.Array;
+import java.util.*;
 
 public class S3_3Sum {
     public static void main(String[] args) {
@@ -9,23 +9,35 @@ public class S3_3Sum {
         get3Sum(nums);
     }
 
-    public static void get3Sum(int nums[]){
-        List<List<Integer>> list = new ArrayList<>();
-        int twoSumTarget;
-        for (int i = 0; i <  nums.length; i++) {
-            twoSumTarget = -1*nums[i];
-            int start=0, end=nums.length-1;
-            while(start < end){
+    public static void get3Sum(int arr[]) {
 
-                if(nums[start] + nums[end] < target)
-                    start++;
-                else if(nums[start] + nums[end] > target)
-                    end--;
-                else {
-                    System.out.println("start : " + start + "\n" + "end :" + end);
-                    break;
-                }
+        // Sort the elements
+        Arrays.sort(arr);
+        Set<List<Integer>> result = new HashSet<>();
+
+        // Now fix the first element and find the other two elements
+        for (int i = 0; i < arr.length - 2; i++)
+        {
+            // Find other two elements using Two Sum approach
+            int left = i + 1;
+            int right = arr.length - 1;
+
+            while (left < right) {
+                int sum = arr[i] + arr[left] + arr[right];
+
+                if (sum == 0) {
+
+                    // Add the set, and move to find other triplets
+                    result.add(Arrays.asList(arr[i], arr[left], arr[right]));
+                    left++;
+                    right--;
+                } else if (sum < 0)
+                    left++;
+                else
+                    right--;
             }
         }
+        System.out.println( new ArrayList<>(result));
     }
 }
+
