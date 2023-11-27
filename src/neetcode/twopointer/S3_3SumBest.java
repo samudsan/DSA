@@ -1,9 +1,8 @@
 package neetcode.twopointer;
 
-import java.sql.Array;
 import java.util.*;
 
-public class S3_3Sum {
+public class S3_3SumBest {
     public static void main(String[] args) {
         int nums[] = {-1,0,1,2,-1,-4};
         get3Sum(nums);
