@@ -34,4 +34,7 @@ public class S2_3Sum {
         }
         return list;
     }
+
+    public static class S5_TrappingRainWater {
+    }
 }
