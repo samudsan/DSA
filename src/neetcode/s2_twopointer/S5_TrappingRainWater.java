@@ -1,4 +1,4 @@
-package neetcode.twopointer;
+package neetcode.s2_twopointer;
 
 public class S5_TrappingRainWater {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package neetcode.twopointer;
+package neetcode.s2_twopointer;
 
 public class S1_ValidPalindrome1 {
     public static void main(String[] args) {

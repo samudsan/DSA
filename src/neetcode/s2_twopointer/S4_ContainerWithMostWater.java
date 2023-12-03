@@ -1,4 +1,4 @@
-package neetcode.twopointer;
+package neetcode.s2_twopointer;
 
 public class S4_ContainerWithMostWater {
     public static void main(String[] args) {

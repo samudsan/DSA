@@ -1,4 +1,4 @@
-package neetcode.twopointer;
+package neetcode.s2_twopointer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

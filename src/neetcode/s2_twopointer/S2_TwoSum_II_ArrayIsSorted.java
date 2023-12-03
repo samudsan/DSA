@@ -1,4 +1,4 @@
-package neetcode.twopointer;
+package neetcode.s2_twopointer;
 
 public class S2_TwoSum_II_ArrayIsSorted {
     public static void main(String[] args) {
