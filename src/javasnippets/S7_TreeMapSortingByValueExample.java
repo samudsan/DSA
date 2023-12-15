@@ -18,6 +18,7 @@ public class S7_TreeMapSortingByValueExample {
         //Sorting Using Values, in below Code define list of entry objects and initialised too.
         ArrayList<Map.Entry<String, Integer>> entryArrayList = new ArrayList<>(treeMap.entrySet());
         entryArrayList.sort(Map.Entry.comparingByValue());
+        System.out.println(entryArrayList);
         System.out.println("Sorted Arraylist tree map entries : " + entryArrayList);
 
         //insert arraylist items to new treeMap
