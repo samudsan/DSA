@@ -6,7 +6,10 @@ import java.util.LinkedList;
 public class S2_MergeIntervals {
     public static void main(String[] args) {
         int[][] intervals = {{1,3},{2,6},{8,10},{15,18}};
-        System.out.println(Arrays.toString(merge(intervals)));
+        int[][] mergedIntervals = merge(intervals);
+        for (int[] interval : mergedIntervals) {
+            System.out.println(Arrays.toString(interval));
+        }
     }
 
         public static int[][] merge(int[][] intervals) {
