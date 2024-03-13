@@ -11,7 +11,8 @@ public class TestClass {
         int k = 2;
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
 
-        for(int i=0; i<nums.length; i++){
+        //Creating frequency map
+	for(int i=0; i<nums.length; i++){
             frequencyMap.put(nums[i], frequencyMap.getOrDefault(nums[i], 0)+1);
         }
         ArrayList<Map.Entry<Integer, Integer>> entryArrayList = new ArrayList<>(frequencyMap.entrySet());
