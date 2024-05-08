@@ -9,7 +9,7 @@ public class S9LongestConsecutiveSequence {
     }
 
     public static int longestConsecutiveSequence(int[] nums){
-        //initially visimap will have all false as its value, as we didnot visit any key
+        //initially visitmap will have all false as its value, as we didnot visit any key
         HashMap<Integer, Boolean> visitMap = new HashMap<>();
         for (int num : nums) {
             visitMap.put(num, false);

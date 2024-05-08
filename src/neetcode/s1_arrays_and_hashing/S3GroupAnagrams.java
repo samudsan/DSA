@@ -26,6 +26,8 @@ Second(Best): we can also sort our strings and update hashmap key with sorted ve
                 store[s.charAt(i) - 'a']++;
             }
             charCountSeq = Arrays.toString(store);
+            System.out.println(charCountSeq);
+
             if (hm.get(charCountSeq)== null) {
                 ArrayList<String> al = new ArrayList<>();
                 al.add(s);
@@ -43,5 +45,4 @@ Second(Best): we can also sort our strings and update hashmap key with sorted ve
         }
     return finalList;
     }
-
 }

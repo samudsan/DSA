@@ -23,7 +23,6 @@ public class S3GroupAnagramsBest {
             java.util.Arrays.sort(c);          // sort
             String sortedWord = new String(c);  // convert back to String
 
-
             if (hm.get(sortedWord)== null) {
                 ArrayList<String> al = new ArrayList<>();
                 al.add(word);

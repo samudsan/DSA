@@ -23,6 +23,8 @@ This problem can solved in two ways,
             if(hm.containsKey(ch))
                 hm.put(ch, hm.get(ch)+1);
             else hm.put(ch, 1);
+            // we can build frequency map/hm with one liner using hm.getOrDefault() method
+            // hm.put(ch, hm.getOrDefault(ch, 0)+1);
         }
 
         for (Map.Entry<Character, Integer> entry :hm.entrySet()) {
