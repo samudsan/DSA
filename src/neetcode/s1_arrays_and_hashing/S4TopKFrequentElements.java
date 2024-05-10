@@ -12,7 +12,7 @@ public class S4TopKFrequentElements {
     }
 
     private static int[] getTopkFrequentElement(int[] nums, int k) {
-        int[] arr = new int[k];
+        int[] arr = new int[k]; // to store the output array with topk frequent elements
         //Creating a frequency Map
         Map<Integer, Integer> frequncyMap  = new HashMap<>();
         for (int num : nums) {
