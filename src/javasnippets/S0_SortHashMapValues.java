@@ -31,6 +31,11 @@ public class S0_SortHashMapValues {
         System.out.println(entryList);
 
         System.out.println("sorted keys using lamda");
-        entryList.stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+        entryList.stream()
+                .sorted(Map.Entry.comparingByValue());
+//                .forEach(System.out::println);
+        System.out.printf(entryList.toString());
+
+
     }
 }
