@@ -22,6 +22,7 @@ public class S7_TreeMapSortingByValueExample {
         System.out.println("Sorted Arraylist tree map entries : " + entryArrayList);
 
         //insert arraylist items to new treeMap
+        // we are using linked hashmap as it preserve order of insertion.
         LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
 
         for (Map.Entry<String, Integer> entry: entryArrayList) {
