@@ -3,6 +3,12 @@ package javasnippets;
 import java.util.*;
 
 /*we can also sort keys in sorted order with below program by just changing Map.Entry.comparingByValue() to Map.Entry.comparingByKey()*/
+
+
+/* The Java program sorts the values of a HashMap in ascending order and prints the resulting sorted map. Initially,
+ * it converts the map entries into a list, then sorts this list based on the values. It creates a new LinkedHashMap to maintain the sorted order,
+ * populates it with the sorted entries, and prints the sorted map. Additionally, it showcases sorting using lambda functions as an alternative approach
+*/
 public class S0_SortHashMapValues {
     public static void main(String[] args) {
         Map<String, Integer> unsortedMap = new HashMap<>();
