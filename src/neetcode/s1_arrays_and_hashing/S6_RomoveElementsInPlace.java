@@ -12,6 +12,12 @@ public class S6_RomoveElementsInPlace {
         }
     }
 
+//    below method iterating through the array with two pointers, i and j,
+//    where i keeps track of the current position to place non-val elements.
+//    When an element at index j is not equal to val, it swaps the elements at indices i and j,
+//    then increments i. Finally, it returns the new length of the modified array,
+//    which effectively represents the number of elements remaining after removal.
+
     private static int removeElement(int[] nums, int val) {
         int temp, i=0;
         for (int j = 0; j <nums.length; j++) {
