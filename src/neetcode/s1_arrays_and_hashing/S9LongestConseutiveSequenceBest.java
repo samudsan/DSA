@@ -7,7 +7,10 @@ public class S9LongestConseutiveSequenceBest {
         int nums[] = {100,4,200,1,3,2};
         System.out.println("Longest consecutive sequence : "+longestConsecutive(nums));
     }
-
+   // The program calculates the length of the longest consecutive sequence in the array.
+   // It does so by utilizing a HashSet to efficiently check for consecutive numbers.
+   // The algorithm iterates through the array, checking if each number is the start of a sequence
+   // and then incrementing to find the consecutive elements. The length of the longest consecutive sequence is returned as the output.
     public static int longestConsecutive(int[] nums) {
         if (nums.length == 0) return 0;
         HashSet<Integer> hs = new HashSet<>();
