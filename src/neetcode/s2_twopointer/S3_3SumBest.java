@@ -7,6 +7,10 @@ public class S3_3SumBest {
         int nums[] = {-1,0,1,2,-1,-4};
         get3Sum(nums);
     }
+    // We need to sort the array then we will go through the elements, we assume that
+    // each element is part of triplet and search for other two elements in the array
+    // finding other two element is based on twosum algorithm when array is sorted.
+    // while finding other two element we can ignore already visited/considered for triplets from the initial for loop
 
     public static void get3Sum(int arr[]) {
 
