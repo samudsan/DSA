@@ -6,6 +6,7 @@ public class S4_ContainerWithMostWater {
         System.out.println(getContainerWithMostWater(nums));
     }
 
+    // It utilizes a two-pointer approach to iterate through the array from both ends, calculating the area between the pointers and updating the maximum area accordingly. Finally, it returns the maximum area.
     public static int getContainerWithMostWater(int nums[]){
         int left  = 0;
         int right = nums.length-1;
