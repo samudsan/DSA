@@ -6,7 +6,7 @@ public class S1_BestTimeToBuyAndSellStock {
         int[] prices = {3,1,2,4,0,5};
         System.out.println(bestTimeToBuyAndSellStock(prices));
     }
-
+    // this solution is for buying and selling stock only once.
     private static int bestTimeToBuyAndSellStock(int[] prices){
         int min = Integer.MAX_VALUE;
         int profit = 0;
