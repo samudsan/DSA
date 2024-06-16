@@ -2,6 +2,13 @@ package neetcode.s3_sliding_window;
 
 import java.util.HashSet;
 
+/*Given a string s, find the length of the longest substring without repeating characters
+Example 1:
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+*/
+
 public class S2_LongestSubStringWithoutDuplicates {
     public static void main(String[] args) {
         String s = "xyyzp77xyyzi";
