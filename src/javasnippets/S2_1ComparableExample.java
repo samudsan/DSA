@@ -22,7 +22,10 @@ public class S2_1ComparableExample {
         System.out.println("Before Sorting : " + footballTeam);
         Collections.sort(footballTeam);
         System.out.println("After Sorting : " + footballTeam);
-        System.out.println(player1);  // which gives details as per Player class to string implementation
+        // If you directly print a java object it will call its toString default implmentation
+        // you can override existing implementation with your own to string implementation
+        System.out.println(player1);
+
     }
 }
 
@@ -54,7 +57,7 @@ class Player implements Comparable<Player> {
                 "ranking=" + ranking +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                '}';
+                "}";
     }
 
 }
