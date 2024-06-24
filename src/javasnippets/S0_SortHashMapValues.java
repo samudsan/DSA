@@ -21,6 +21,7 @@ public class S0_SortHashMapValues {
         List<Map.Entry<String, Integer>> entryList = new ArrayList<>(unsortedMap.entrySet());
 
         // Sort the list based on the values of the entries
+        // For sort method of collection we need provide list and a comparator class
         Collections.sort(entryList, Map.Entry.comparingByValue());
 
         // Create a new linked hash map to maintain the order of the sorted entries
