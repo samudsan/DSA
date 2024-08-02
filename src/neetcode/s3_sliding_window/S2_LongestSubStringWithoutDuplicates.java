@@ -1,6 +1,7 @@
 package neetcode.s3_sliding_window;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /*Given a string s, find the length of the longest substring without repeating characters
 Example 1:
@@ -29,6 +30,31 @@ public class S2_LongestSubStringWithoutDuplicates {
             }
         }
         System.out.println(max);
+    }
+
+    public static int longestSubStringWithoutDuplicates(String s){
+        Set<Character> charSet = new HashSet<>();
+        int left = 0;
+        int right=0;
+        int maxLen = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            // If the character is already in the set, remove characters from the left
+            while (charSet.contains(s.charAt(right))) {
+                charSet.remove(s.charAt(left));
+                left++;
+            }
+
+            // Add the current character to the set
+            charSet.add(s.charAt(right));
+            // Update the maximum length found
+            maxLen = Math.max(maxLen, right - left + 1);
+            right++;
+        }
+        return maxLen;
+        /*
+        * sliding window approach used to maintain a dynamic window with two pointers to track the longest substring without repeating characters.
+        * As the right pointer expands the window, the left pointer adjusts to remove duplicates, and the maximum length of the substring is updated accordingly*/
     }
 }
 
