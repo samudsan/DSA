@@ -1,6 +1,10 @@
 package neetcode.s3_sliding_window;
 
 public class S3_LongestSubStringWithKReplacement {
+    /*
+    * Problem: Find the length of the longest substring where you can replace up to k characters to make all characters the same.
+    * Approach: Use a sliding window with character frequency tracking to determine the maximum length of such a substring by adjusting
+    * the window size based on the number of replacements needed.*/
     public static void main(String[] args) {
         String s = "AAABABB";  // Input string
         int k = 2;             // Maximum replacements allowed
