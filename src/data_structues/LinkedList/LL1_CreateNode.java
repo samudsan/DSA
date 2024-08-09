@@ -23,6 +23,7 @@ public class LL1_CreateNode{
             System.out.print(" "+currentNode.data);
             currentNode = currentNode.next;
         }
+        System.out.println();
     }
 }
 
