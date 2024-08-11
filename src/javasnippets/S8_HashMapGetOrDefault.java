@@ -7,6 +7,7 @@ public class S8_HashMapGetOrDefault {
     public static void main(String[] args) {
         int nums[] = new int[]{1,1,2,1,3,2,3,4,4,4};
         HashMap<Integer, Integer> frequencyCountMap = new HashMap<>();
+        // building frequency map in one line
         for(int num : nums){
             frequencyCountMap.put(num, frequencyCountMap.getOrDefault(num, 0)+1);
         }
