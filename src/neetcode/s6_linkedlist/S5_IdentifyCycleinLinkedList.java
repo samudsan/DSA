@@ -15,10 +15,7 @@ public class S5_IdentifyCycleinLinkedList {
     public static boolean isCyclePresent(Node head){
         Node current =  head;
         Node slow = current;
-        Node fast = current.next;
-
-        if (current == null || current.next == null)
-            return false;
+        Node fast = current;
 
         while(fast != null && fast.next != null){
             slow = slow.next;
