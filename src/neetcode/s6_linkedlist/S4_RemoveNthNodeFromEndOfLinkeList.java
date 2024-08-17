@@ -11,7 +11,7 @@ public class S4_RemoveNthNodeFromEndOfLinkeList {
         System.out.print("Before removal : ");
         traversLinkedList(head);
         head = removeNthNodeFromLast(head, 1);
-        System.out.print("after removal Kth Node: ");
+        System.out.print("after removal nth Node: ");
         traversLinkedList(head);
     }
     public static Node removeNthNodeFromLast(Node head, int n){

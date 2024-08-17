@@ -2,18 +2,19 @@ package data_structues.LinkedList;
 
 public class LL1_CreateNode{
     public static void main(String[] args) {
-        Node head = createLLAndGetHead();
+        Node head = createLLAndGetHead(new int[]{10, 20, 30});
         traversLinkedList(head);
     }
 
-    public static Node createLLAndGetHead(){
-        Node node1 = new Node(10);
-        Node node2 = new Node(20);
-        Node node3 = new Node(30);
-
-        Node head = node1;
-        head.next = node2;
-        node2.next = node3;
+    // This mehtod takes an array as input and return head i.e. a linked list version of same data
+    public static Node createLLAndGetHead(int[] arr){
+        Node head = new Node(arr[0]);
+        Node current = head;
+        for (int i = 1; i < arr.length; i++) {
+            Node node = new Node(arr[i]);
+            current.next = node;
+            current = current.next;
+        }
         return head;
     }
 
@@ -27,10 +28,3 @@ public class LL1_CreateNode{
     }
 }
 
-class Node {
-    int data;
-    Node next;
-    Node(int data){
-        this.data = data;
-    }
-}

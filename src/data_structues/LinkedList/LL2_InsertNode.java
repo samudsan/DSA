@@ -2,7 +2,7 @@ package data_structues.LinkedList;
 
 public class LL2_InsertNode {
     public static void main(String[] args) {
-        Node head = LL1_CreateNode.createLLAndGetHead();
+        Node head = LL1_CreateNode.createLLAndGetHead(new int[]{10,20,30});
         Node newElement1 = new Node(40);
         head = insertAtTheEnd(head, newElement1);
         LL1_CreateNode.traversLinkedList(head);
@@ -12,7 +12,7 @@ public class LL2_InsertNode {
         LL1_CreateNode.traversLinkedList(head);
 
         Node newElement3 = new Node(60);
-        head = LL1_CreateNode.createLLAndGetHead();
+        head = LL1_CreateNode.createLLAndGetHead(new int[]{10,20,30});
         head = insertAtBegin(head, newElement3);
         LL1_CreateNode.traversLinkedList(head);
 

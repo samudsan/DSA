@@ -3,9 +3,9 @@ package data_structues.LinkedList;
 import static data_structues.LinkedList.LL1_CreateNode.createLLAndGetHead;
 import static data_structues.LinkedList.LL1_CreateNode.traversLinkedList;
 
-public class LL2_ReverseALinkedList {
+public class LL3_ReverseALinkedList {
     public static void main(String[] args) {
-        Node head = createLLAndGetHead();
+        Node head = createLLAndGetHead(new int[]{10,20,30});
         head = reverseList(head);
         traversLinkedList(head);
     }
