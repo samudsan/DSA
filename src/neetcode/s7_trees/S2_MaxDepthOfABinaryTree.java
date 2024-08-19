@@ -8,7 +8,7 @@ public class S2_MaxDepthOfABinaryTree {
         BinaryTree tree = new BinaryTree();
         TreeNode node = tree.createBinaryTree(new int[]{3,9,20, 0, 0,15,7});
         tree.levelOrder(node);
-        System.out.println();
+        System.out.println("");
         int maxDepth = maxDepth(node);
         System.out.println("max Depth is : "+ maxDepth);
     }

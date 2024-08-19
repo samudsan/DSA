@@ -16,7 +16,5 @@ public class S8_HashMapGetOrDefault {
             //System.out.println(entry.getKey() + " " + entry.getValue());
             System.out.println(entry.toString()); // to directly print each entry in the map
         }
-
-
     }
 }
