@@ -6,7 +6,7 @@ import data_structues.trees.TreeNode;
 public class S2_MaxDepthOfABinaryTree {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
-        TreeNode node = tree.createBinaryTree(new int[]{3,9,20, Integer.parseInt(null), Integer.parseInt(null),15,7});
+        TreeNode node = tree.createBinaryTree(new int[]{3,9,20, 0, 0,15,7});
         tree.levelOrder(node);
         System.out.println();
         int maxDepth = maxDepth(node);
