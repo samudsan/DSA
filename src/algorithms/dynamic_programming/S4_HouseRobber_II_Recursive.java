@@ -8,6 +8,8 @@ public class S4_HouseRobber_II_Recursive {
     public static void main(String[] args) {
         int nums[] =  new int[]{50, 2, 3, 2, 100};
 
+        // we are splitting problem into array 0 to n-1 and then 1-n, passing these arrays to house robber problem and getting max out of them .
+        // solving this way as first and last housed are adjecent in a cycle
         System.out.println(Math.max(rob(Arrays.copyOfRange(nums, 0, nums.length-1)),rob(Arrays.copyOfRange(nums, 1, nums.length) )));
     }
 
