@@ -8,7 +8,7 @@ import java.util.Map;
 public class S1ContainsDuplicate {
     public static void main(String[] args) {
         int array[] = new int[]{1,2,3,1};
-        boolean results = containsDuplicate(array);
+        boolean results = containsDuplicate2(array);
         System.out.println(results);
     }
 /*
@@ -34,7 +34,7 @@ public class S1ContainsDuplicate {
 
 
     // Solution 2: Two Pointers with Sorting (Faster for Large Arrays with Duplicates)
-    public boolean containsDuplicate1(int[] nums) {
+    public static boolean containsDuplicate1(int[] nums) {
             Arrays.sort(nums);
             for (int i = 0; i < nums.length - 1; i++) {
                 if (nums[i] == nums[i + 1]) {
@@ -46,13 +46,13 @@ public class S1ContainsDuplicate {
 
 
     // Solution 3: Using a Frequency Counter (Efficient for Arrays with Limited Range)
-    public boolean containsDuplicate2(int[] nums) {
+    public static boolean containsDuplicate2(int[] nums) {
         Map<Integer, Integer> freq = new HashMap<>();
         for (int num : nums) {
-            if (freq.containsKey(num) && freq.get(num) > 0) {
+            if (freq.containsKey(num)) {
                 return true;
             }
-            freq.put(num, freq.getOrDefault(num, 0) + 1);
+            freq.put(num, 1);
         }
         return false;
     }
