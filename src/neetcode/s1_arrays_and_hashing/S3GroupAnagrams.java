@@ -11,7 +11,7 @@ public class S3GroupAnagrams {
 
 /*This problem is solved using charCountSequence of each word,
 Logic is we solved it using hashmap where key is charCountSequence and values would be list of strings which has same char sequence.
-Second(Best): we can also sort our strings and update hashmap key with sorted version and value with list of strings which has same sorting order.
+Second(): we can also sort our strings and update hashmap key with sorted version and value with list of strings which has same sorting order.
 * */
     private static ArrayList<ArrayList> groupAnagrams(String[] strArray){
 

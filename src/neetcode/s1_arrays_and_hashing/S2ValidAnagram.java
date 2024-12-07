@@ -12,7 +12,7 @@ public class S2ValidAnagram {
     }
 /*
 This problem can solved in two ways,
-    one(Best approach) is creating an array of size 26 and incrmenting respective character index when an alphabet appears,
+    one( approach) is creating an array of size 26 and incrmenting respective character index when an alphabet appears,
     and decreasing the respective index while reading second string. if array contains all zeros it is valid, otherwise not
 
     Second approach is, maintaining charSequence count of s1 and s2 in a hashmap and comparing both hashmaps, if both are same they are valid anagram otherwise not.
