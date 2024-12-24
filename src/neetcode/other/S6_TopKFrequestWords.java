@@ -19,9 +19,11 @@ public class S6_TopKFrequestWords {
 
         List<String> aList = new ArrayList<>(frequencyMap.keySet());
         Collections.sort(aList, (w1,w2) -> {
+            // sorting initially with its frequency
             if(frequencyMap.get(w1) != frequencyMap.get(w2))
                 return frequencyMap.get(w2) - frequencyMap.get(w1);
             else
+                // if freuqncy is same then sorting sorting alphabetically(lexically for workds)
                 return w1.compareTo(w2);
         });
         return aList.subList(0, k);
