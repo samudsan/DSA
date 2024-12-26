@@ -14,7 +14,11 @@ public class S1_BestTimeToBuyAndSellStock {
         for(int i=1; i<prices.length; i++){
            if(prices[i] < min)
                min = prices[i];
-           else // we will come to else part only if current price is not less then our min price, It helps if our prices are ordered in decreasing. we don't calculate price that time as prices continuously decreasing
+
+               // we will come to else part only if current price is not less then our min price,
+               // It helps if our prices are ordered in decreasing.
+               // we don't calculate price that time as prices continuously decreasing
+           else
                profit = Math.max(prices[i] - min, profit);
         }
         return profit;
