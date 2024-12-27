@@ -6,19 +6,26 @@ public class S1_FindMinInRotatedSortedArray {
         System.out.println(findMin(arr));
     }
 
-    public static int findMin(int[] arr) {
-        int l = 0, r = arr.length - 1;
-        int mid, min;
+    public static int findMin(int[] nums) {
+        // Initialize the left and right pointers
+        int left = 0, right = nums.length - 1;
 
-        while (l <= r) {
-            mid = (l + r) / 2;
-            if (arr[mid] > arr[r]) { // this is true only if min lies right side of array/ right half is not fully sorted
-                l = mid + 1;
-            } else if (arr[mid] < arr[r]) {
-                r = mid;
-            } else
-                return arr[mid];
+        // While there's a range to search
+        while (left < right) {
+            // Calculate the midpoint
+            int mid = left + (right - left) / 2;
+
+            // If middle element is greater than the right, min is in the right half
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;
+            } else {
+                // min must be in the left half (including mid)
+                right = mid;
+            }
         }
-        return -1;
+
+        // The minimum element is at the pointer `left`
+        return nums[left];
     }
+
 }
