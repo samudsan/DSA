@@ -6,30 +6,37 @@ public class S2_FindTargetElementInRotatedSortedArray {
         System.out.println(findMin(arr, 2));
     }
 
-    public static int findMin(int[] arr, int target) {
-        int l = 0, r = arr.length - 1;
-        int mid, TargetFoundAt;
+    public static int findMin(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
 
-        while (l <= r) {
-            mid = (l + r) / 2;
-            if (target == arr[mid]) {
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            // Check if mid element is the target
+            if (nums[mid] == target) {
                 return mid;
             }
-            // laft portion of array which is sorted
-            else if (arr[l] <= arr[mid]) {
-                if (target < arr[l] || target > arr[mid]) //makes sure element is not in left sorted
-                    l = mid + 1;
-                else
-                    r = mid - 1;
-            }
-            //right portion of array
-            else {
-                if (target < arr[mid] || target > arr[r]) // makes sure element is not right sorted
-                    r = mid - 1;
-                else
-                    l = mid + 1;
+
+            // Determine which side is sorted
+            if (nums[left] <= nums[mid]) { // Left part is sorted
+                if (nums[left] <= target && target < nums[mid]) {
+                    // Target is within the sorted left part
+                    right = mid - 1;
+                } else {
+                    // Target is in the right part
+                    left = mid + 1;
+                }
+            } else { // Right part is sorted
+                if (nums[mid] < target && target <= nums[right]) {
+                    // Target is within the sorted right part
+                    left = mid + 1;
+                } else {
+                    // Target is in the left part
+                    right = mid - 1;
+                }
             }
         }
+
+        // If we reach here, target is not in array
         return -1;
-    }
 }
