@@ -2,7 +2,7 @@ package neetcode.s5_binarysearch;
 
 public class S2_FindTargetElementInRotatedSortedArray {
     public static void main(String[] args) {
-        int[] arr = {3,4,5,6,1,2};
+        int[] arr = {3, 4, 5, 6, 1, 2};
         System.out.println(findMin(arr, 2));
     }
 
@@ -39,4 +39,5 @@ public class S2_FindTargetElementInRotatedSortedArray {
 
         // If we reach here, target is not in array
         return -1;
+    }
 }

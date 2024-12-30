@@ -13,14 +13,14 @@ public class S5_IdentifyCycleinLinkedList {
     }
 
     public static boolean isCyclePresent(Node head){
-        Node current =  head;
-        Node slow = current;
-        Node fast = current;
+        Node slow = head;
+        Node fast = head;
 
         while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
-            if(slow == fast) // if cycle available, fast and slow pointer definitely meets
+            // if there is a cycle, fast and slow pointer definitely meets
+            if(slow == fast)
                 return true;
         }
         return false;
