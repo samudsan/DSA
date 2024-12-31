@@ -13,32 +13,32 @@ public class S2_MergeTwoSortedLists {
         traversLinkedList(head); // prints linkedList nodes
     }
 
-    public static Node mergeTwoSortedLists(Node head1, Node head2) {
-
-        // Create a dummy node to simplify edge cases
+    public static Node mergeTwoSortedLists(Node list1, Node list2) {
+        // Create a dummy node to act as the start of the merged list
         Node dummy = new Node(0);
         Node current = dummy;
 
-        // loop should run till either of the list is fully traversed
-        while (head1 != null && head2 != null) {
-            if (head1.data <= head2.data) {
-                current.next = head1;
-                head1 = head1.next;
+        // While neither list is empty, pick the smaller head and append it to the merged list
+        while (list1 != null && list2 != null) {
+            if (list1.data <= list2.data) {
+                current.next = list1;
+                list1 = list1.next;
             } else {
-                current.next = head2;
-                head2 = head2.next;
+                current.next = list2;
+                list2 = list2.next;
             }
             current = current.next;
         }
 
-        // If any nodes are left in either list, append them
-        if (head1 != null) {
-            current.next = head1;
+        // At this point, at least one of the two lists is null
+        // Append the remaining non-null list to the merged list
+        if (list1 != null) {
+            current.next = list1;
         } else {
-            current.next = head2;
+            current.next = list2;
         }
 
-        // Return the merged list, which starts at dummy.next
+        // Return the merged list starting from the node after the dummy node
         return dummy.next;
     }
 }

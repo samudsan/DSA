@@ -6,7 +6,7 @@ public class LL1_CreateNode{
         traversLinkedList(head);
     }
 
-    // This mehtod takes an array as input and return head
+    // This method takes an array as input and return head
     // i.e. a linked list version of same data
     public static Node createLLAndGetHead(int[] arr){
         Node head = new Node(arr[0]);
