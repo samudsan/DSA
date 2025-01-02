@@ -45,6 +45,7 @@ public class LL2_InsertNode {
     public static Node insertAtBegin(Node head, Node newNode){
         newNode.next = head;
         System.out.print("\nInserting at the begining");
-        return newNode;
+        head = newNode;
+        return head;
     }
 }
