@@ -22,6 +22,8 @@ public class S3_ReorderLinkedListBest {
         if (head == null || head.next == null) {
             return;
         }
+        // The idea is finding the mid of the list and reversing second half and combining them
+        // back with the intended order.
 
         // Step 1: Find the middle of the list
         Node slow = head, fast = head;
