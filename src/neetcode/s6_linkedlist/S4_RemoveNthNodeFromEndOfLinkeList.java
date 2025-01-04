@@ -15,25 +15,29 @@ public class S4_RemoveNthNodeFromEndOfLinkeList {
         traversLinkedList(head);
     }
     public static Node removeNthNodeFromLast(Node head, int n){
-        Node dummy = new Node(0);
-        dummy.next = head;
-        Node first = dummy;
-        Node second = dummy;
+            // Initialize a dummy node which helps in handling edge cases like removing the head
+            Node dummy = new Node(0);
+            dummy.next = head;
 
-        // Move first n+1 steps ahead
-        for (int i = 0; i <= n; i++) {
-            first = first.next;
+            // Initialize two pointers both at the dummy node
+            Node slow = dummy;
+            Node fast = dummy;
+
+            // Move fast ahead by n+1 steps to create the required gap
+            for (int i = 0; i <= n; i++) {
+                fast = fast.next;
+            }
+
+            // Move both pointers till fast reaches the end of the list
+            while (fast != null) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            // Adjust the pointers to skip the nth node
+            slow.next = slow.next.next;
+
+            // Return the updated list starting from the node next to dummy
+            return dummy.next;
         }
-
-        // Move both first and second until first reaches the end
-        while (first != null) {
-            first = first.next;
-            second = second.next;
-        }
-
-        // Remove the nth node
-        second.next = second.next.next;
-
-        return dummy.next;
-    }
 }
