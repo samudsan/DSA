@@ -4,34 +4,34 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import java.util.*;
+
 public class S2_3Sum {
-    public static void main(String[] args) {
-        int[] nums = {-1,0,1,2,-1,-4};
-        System.out.println(threeSum(nums));
-    }
-    public static List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);
-        int target = 0;
-        List<List<Integer>> list = new ArrayList<>();
-        int j,k,neededSum;
-        for(int i=0; i< nums.length; i++){
-            if(i == 0 || nums[i] != nums[i-1]){
-                j = i+1; k=nums.length-1;
-                neededSum = target - nums[i];
-                while(j<k){
-                    if(nums[j] + nums[k] == neededSum){
-                        list.add(Arrays.asList(nums[i],nums[j],nums[k]));
-                        while(j<k && nums[j]==nums[j+1]) j++;
-                        while(j<k && nums[k]==nums[k-1]) k--;
-                        j++;
-                        k--;
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(nums); // Sort the array first
+
+        for (int i = 0; i < nums.length - 2; i++) {
+            // To avoid duplicates
+            if (i == 0 || nums[i] != nums[i - 1]) {
+                int left = i + 1, right = nums.length - 1;
+                while (left < right) {
+                    int sum = nums[i] + nums[left] + nums[right];
+                    if (sum == 0) {
+                        result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                        // Skip duplicates for `left` and `right`
+                        while (left < right && nums[left] == nums[left + 1]) left++;
+                        while (left < right && nums[right] == nums[right - 1]) right--;
+                        left++;
+                        right--;
+                    } else if (sum < 0) {
+                        left++;
+                    } else {
+                        right--;
                     }
-                    else if(nums[j] + nums[k] < neededSum)
-                        j++;
-                    else k--;
                 }
             }
         }
-        return list;
+        return result;
     }
 }
