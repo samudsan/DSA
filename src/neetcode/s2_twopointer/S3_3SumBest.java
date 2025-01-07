@@ -22,6 +22,7 @@ public class S3_3SumBest {
         for (int i = 0; i < arr.length - 2; i++)
         {
             // Find other two elements using Two Sum approach
+            // as our intention is finding unique triplets we can always start from i+1 (i.e. all triplets of i will be captured at the ith iteration)
             int left = i + 1;
             int right = arr.length - 1;
 
